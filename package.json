@@ -1,0 +1,28 @@
+{
+  "name": "belajar-webpack-code",
+  "version": "1.0.0",
+  "description": "Belajar Webpack",
+  "keywords": [
+    "Webpack",
+    "NPM"
+  ],
+  "homepage": "https://github.com/bagoesihsant/belajar-webpack-code#readme",
+  "bugs": {
+    "url": "https://github.com/bagoesihsant/belajar-webpack-code/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bagoesihsant/belajar-webpack-code.git"
+  },
+  "license": "MIT",
+  "author": "Bagoes Ihsan Taufiqurrahman",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^5.101.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
