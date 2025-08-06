@@ -32,5 +32,10 @@ module.exports = {
             }
         ]
     },
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Webpack Generated Index',
+            template: './src/html/template.html'
+        })
+    ],
 };
