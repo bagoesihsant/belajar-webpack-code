@@ -7,7 +7,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.[contenthash].js'
+        filename: 'bundle.[contenthash].js',
+        clean: true
     },
     devtool: false,
     module: {
