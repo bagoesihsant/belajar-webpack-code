@@ -19,7 +19,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --config ./webpack/config/webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.28.0",

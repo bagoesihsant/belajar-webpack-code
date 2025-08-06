@@ -12,3 +12,5 @@ const calculatorService = new CalculatorService();
 const jokesService = new JokesService();
 
 run(alertService, calculatorService, jokesService);
+
+alert('This message only appear once and you can not escape.');
