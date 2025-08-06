@@ -11,11 +11,11 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 use: ['style-loader', 'css-loader']
             },
             {
-                test: /\.(?:js|mjs|cjs)$/,
+                test: /\.(?:js|mjs|cjs)$/i,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -23,6 +23,10 @@ module.exports = {
                         presets: ['@babel/preset-env']
                     }
                 }
+            },
+            {
+                test: /\.s[ac]ss$/i,
+                use: ['style-loader', 'css-loader', 'sass-loader']
             }
         ]
     }
