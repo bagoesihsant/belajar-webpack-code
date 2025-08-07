@@ -1,13 +1,21 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const path = require('path');
 
 module.exports = {
     entry: './src/index.js',
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Webpack Generated Index',
+            template: './src/html/template.html'
+        }),
+    ],
     module: {
         rules: [
             {
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
             },
             {
                 test: /\.(?:js|mjs|cjs)$/i,
@@ -21,14 +29,8 @@ module.exports = {
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'Webpack Generated Index',
-            template: './src/html/template.html'
-        })
-    ],
 };
