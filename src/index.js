@@ -4,7 +4,7 @@ import { JokesService } from './app/jokes.service.js';
 
 import { run } from './app/app.js';
 
-import * as boostrap from 'bootstrap';
+import vendor from './vendor.js';
 import css from './styles/style.scss';
 
 const alertService = new AlertService();
