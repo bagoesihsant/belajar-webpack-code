@@ -10,6 +10,7 @@ module.exports = merge(common, {
     output: {
         path: path.resolve(__dirname, '../dist'),
         filename: 'bundle.dev.[contenthash].js',
+        assetModuleFilename: 'img/[name][hash][ext]',
         clean: true
     },
     devtool: false,
@@ -20,10 +21,10 @@ module.exports = merge(common, {
     ],
     devServer: {
         static: {
-            directory: path.join(__dirname, 'public'),
+            directory: path.join(__dirname, '../../src'),
         },
         compress: true,
-        port: 9000,
+        port: 3000,
         liveReload: true
     }
 });
